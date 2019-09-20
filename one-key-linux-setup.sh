@@ -54,8 +54,7 @@ antigen bundle tmux
 antigen theme robbyrussell
 
 # Tell antigen that you're done
-antigen apply
-"
+antigen apply"
 
 zshrc="source ~/antigen.zsh
 antigen init ~/.antigenrc
@@ -63,8 +62,7 @@ antigen init ~/.antigenrc
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # Set python to python3 since many os do not install python2
-alias python='python3'
-"
+alias python='python3'"
 
 install_2(){
     cd $HOME
@@ -77,9 +75,10 @@ EOF
 $zshrc
 EOF
     if [ "$TERM" == "xterm" ]; then
-    echo "# Enable 256 color to make auto-suggestions look nice" >> $HOME/.zshrc
-    echo "export TERM=xterm-256color" >> $HOME/.zshrc
-fi
+        echo "# Enable 256 color to make auto-suggestions look nice" >> $HOME/.zshrc
+        echo "export TERM=xterm-256color" >> $HOME/.zshrc
+    fi
+    sudo chmod -R 755 $HOME/.antigen
 }
 
 install_spacevim(){
@@ -90,11 +89,11 @@ install_spacevim(){
 install_done(){
     # change zsh to default shell
     sudo chsh -s /bin/zsh
-    echo "[*] ENJOY! Script by Miracleyoo."
+    echo -e "\n\n\n[*] ENJOY! Script by Miracleyoo.\n\n\n"
+    /bin/zsh
 }
 
 install_1
 install_2
-install_done
 install_spacevim
-/bin/zsh
+install_done
