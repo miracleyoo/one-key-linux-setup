@@ -11,7 +11,6 @@ install_1(){
     for i in ${package_list[@]}; do
         sudo apt-get install -y $i
     done
-    sudp pip3 install thefuck
 }
 
 antigenrc="# Load the oh-my-zsh's library
@@ -32,9 +31,6 @@ antigen bundle zsh-users/zsh-completions
 
 # Extract or unzip all kinds of file with simply a 'x'
 antigen bundle extract
-
-# When you type a command wrongly, just type 'fuck'!
-antigen bundle thefuck
 
 # Simply type a 'z target_dir_name' without the whole path
 antigen bundle z
@@ -89,7 +85,7 @@ install_spacevim(){
 install_done(){
     # change zsh to default shell
     sudo chsh -s /bin/zsh
-    echo -e "\n\n\n[*] ENJOY! Script by Miracleyoo.\n\n\n"
+    echo -e "\n\n\n[*] ENJOY! Script written by Miracleyoo.\n\n\n"
     /bin/zsh
 }
 
