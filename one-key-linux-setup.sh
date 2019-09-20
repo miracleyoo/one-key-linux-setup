@@ -1,4 +1,5 @@
 #!/bin/bash
+# 
 # Author: Miracleyoo
 # Date: 2019.09.19
 
@@ -63,7 +64,9 @@ antigen apply
 
 zshrc="
 # Enable 256 color to make auto-suggestions look nice
-export TERM="xterm-256color"
+if [ "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
 # Make sure there will not be mojibake
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
@@ -79,6 +82,11 @@ install_2(){
     echo $zshrc >> $HOME/.zshrc
 }
 
+install_spacevim(){
+    # Mention: Need to start vim twice! First time chose mode, exit, second time install plugins
+    curl -sLf https://spacevim.org/install.sh | bash
+}
+
 install_done(){
     # change zsh to default shell
     sudo chsh -s /bin/zsh
@@ -88,4 +96,5 @@ install_done(){
 
 install_1
 install_2
+install_spacevim
 install_done
