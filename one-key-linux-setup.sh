@@ -16,41 +16,38 @@ install_1(){
 antigenrc="# Load the oh-my-zsh's library
 antigen use oh-my-zsh
 
-antigen bundle <<EOBUNDLES
-    # Bundles from the default repo (robbyrussell's oh-my-zsh)
-    git
-    heroku
+# Bundles from the default repo (robbyrussell's oh-my-zsh)
+antigen bundle git
+antigen bundle heroku
 
-    # Syntax highlighting bundle.
-    zsh-users/zsh-syntax-highlighting
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-    # Fish-like auto suggestions
-    zsh-users/zsh-autosuggestions
+# Fish-like auto suggestions
+antigen bundle zsh-users/zsh-autosuggestions
 
-    # Extra zsh completions
-    zsh-users/zsh-completions
+# Extra zsh completions
+antigen bundle zsh-users/zsh-completions
 
-    # Extract or unzip all kinds of file with simply a 'x'
-    extract
+# Extract or unzip all kinds of file with simply a 'x'
+antigen bundle extract
 
-    # When you type a command wrongly, just type 'fuck'!
-    thefuck
+# When you type a command wrongly, just type 'fuck'!
+antigen bundle thefuck
 
-    # Simply type a 'j target_dir_name' without the whole path
-    autojump
+# Simply type a 'z target_dir_name' without the whole path
+antigen bundle z
 
-    # cp with progress bar (rsync)
-    cp
+# cp with progress bar (rsync)
+antigen bundle cp
 
-    # suggests package name with relevant command
-    command-not-found
+# suggests package name with relevant command
+antigen bundle command-not-found
 
-    # Other
-    pip
-    lein
-    tmux
-
-EOBUNDLES
+# Other
+antigen bundle pip
+antigen bundle lein
+antigen bundle tmux
 
 # Load the theme
 antigen theme robbyrussell

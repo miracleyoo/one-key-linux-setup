@@ -1,3 +1,0 @@
-
-# Enable 256 color to make auto-suggestions look nice
-if [ '$TERM' == 'xterm' ]; then    export TERM=xterm-256colorfi# Make sure there will not be mojibakeexport LC_ALL=en_US.UTF-8export LANG=en_US.UTF-8# Set python to python3 since many os do not install python2alias python='python3'
