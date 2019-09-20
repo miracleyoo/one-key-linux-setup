@@ -11,7 +11,7 @@ install_1(){
     for i in ${package_list[@]}; do
         sudo apt-get install -y $i
     done
-    pip install thefuck
+    pip3 install thefuck
 }
 
 antigenrc="# Load the oh-my-zsh's library
