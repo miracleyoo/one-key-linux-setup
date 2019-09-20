@@ -5,13 +5,13 @@
 
 install_1(){
     # Build a package list here
-    package_list='git curl zsh tmux vim python3-pip python-pip'
+    package_list='git curl zsh tmux vim python3-dev python3-pip python3-setuptools'
 
     sudo apt-get update -y
     for i in ${package_list[@]}; do
         sudo apt-get install -y $i
     done
-    pip install thefuck
+    sudp pip3 install thefuck
 }
 
 antigenrc="# Load the oh-my-zsh's library
@@ -90,12 +90,11 @@ install_spacevim(){
 install_done(){
     # change zsh to default shell
     sudo chsh -s /bin/zsh
-    /bin/zsh
-    echo "[*] ENJOY! Script from Miracleyoo."
+    echo "[*] ENJOY! Script by Miracleyoo."
 }
 
 install_1
 install_2
 install_done
 install_spacevim
-
+/bin/zsh
