@@ -1,7 +1,11 @@
 #!/bin/bash
-# 
 # Author: Miracleyoo
+# E-mail: mirakuruyoo@gmail.com
 # Date: 2019.09.19
+# Usage:
+# 1. Make sure you already have curl installed by "sudo apt-get install curl".
+# 2. Use command `curl -fsSL https://raw.githubusercontent.com/miracleyoo/initialize-server-script/master/one-key-linux-setup.sh -o minit.sh && sudo bash minit.sh`
+# 3. You are all set! Here is an awesome new linux!
 
 install_1(){
     # Build a package list here
