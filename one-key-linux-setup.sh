@@ -14,7 +14,7 @@ install_1(){
 }
 
 antigenrc="
-source \$HOME/antigen.zsh
+source ~/antigen.zsh
     
 # Load the oh-my-zsh's library
 antigen use oh-my-zsh
@@ -63,23 +63,28 @@ antigen apply
 "
 
 zshrc="
-# Enable 256 color to make auto-suggestions look nice
-if [ "$TERM" == "xterm" ]; then
-    export TERM=xterm-256color
-fi
+source ~/.antigenrc
 # Make sure there will not be mojibake
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # Set python to python3 since many os do not install python2
-alias python="python3"
+alias python='python3'
 "
 
 install_2(){
     cd $HOME
     curl -L git.io/antigen > antigen.zsh
-    echo $antigenrc > .antigenrc
-    echo "source \$HOME/.antigenrc" >> $HOME/.zshrc
-    echo $zshrc >> $HOME/.zshrc
+    cat <<EOF  > .antigenrc
+$antigenrc
+EOF
+    # echo $antigenrc > .antigenrc
+    cat << EOF >> $HOME/.zshrc
+$zshrc
+EOF
+    if [ "$TERM" == "xterm" ]; then
+    echo "# Enable 256 color to make auto-suggestions look nice" >> $HOME/.zshrc
+    echo "export TERM=xterm-256color" >> $HOME/.zshrc
+fi
 }
 
 install_spacevim(){
