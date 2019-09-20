@@ -5,12 +5,13 @@
 
 install_1(){
     # Build a package list here
-    package_list='git curl zsh tmux vim thefuck python3-pip'
+    package_list='git curl zsh tmux vim python3-pip'
 
     sudo apt-get update -y
     for i in ${package_list[@]}; do
         sudo apt-get install -y $i
     done
+    pip install thefuck
 }
 
 antigenrc="# Load the oh-my-zsh's library
