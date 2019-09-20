@@ -13,10 +13,7 @@ install_1(){
     done
 }
 
-antigenrc="
-source ~/antigen.zsh
-    
-# Load the oh-my-zsh's library
+antigenrc="# Load the oh-my-zsh's library
 antigen use oh-my-zsh
 
 antigen bundle <<EOBUNDLES
@@ -62,8 +59,8 @@ antigen theme robbyrussell
 antigen apply
 "
 
-zshrc="
-source ~/.antigenrc
+zshrc="source ~/antigen.zsh
+antigen init ~/.antigenrc
 # Make sure there will not be mojibake
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -101,5 +98,6 @@ install_done(){
 
 install_1
 install_2
-install_spacevim
 install_done
+install_spacevim
+
