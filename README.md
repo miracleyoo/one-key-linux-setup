@@ -14,7 +14,7 @@ It is highly customizable and elegantly wrote, you can folk and customize your o
 
 1. Make sure you already have curl installed by "sudo apt-get install curl".
 
-2. Use command `curl -fsSL https://raw.githubusercontent.com/miracleyoo/initialize-server-script/master/one-key-linux-setup.sh -o one-key-linux-setup.sh && one-key-linux-setup.sh`
+2. Use command `curl -fsSL https://raw.githubusercontent.com/miracleyoo/one-key-linux-setup/master/one-key-linux-setup.sh -o one-key-linux-setup.sh && one-key-linux-setup.sh`
 
 3. You are all set! Here is an awesome new linux!
 
