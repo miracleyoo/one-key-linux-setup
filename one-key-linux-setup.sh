@@ -1,10 +1,15 @@
 #!/bin/bash
+# Copyright (c) 2022 Zhongyang Zhang
+# 
+# This software is released under the MIT License.
+# https://opensource.org/licenses/MIT
+#
 # Author: Miracleyoo
 # E-mail: mirakuruyoo@gmail.com
-# Date: 2019.09.19
+# Date: 2022.03.13
 # Usage:
 # 1. Make sure you already have curl installed by "sudo apt-get install curl".
-# 2. Use command `curl -fsSL https://raw.githubusercontent.com/miracleyoo/initialize-server-script/master/one-key-linux-setup.sh -o minit.sh && sudo bash minit.sh`
+# 2. Use command `curl -fsSL https://raw.githubusercontent.com/miracleyoo/one-key-linux-setup/master/one-key-linux-setup.sh -o minit.sh && sudo bash minit.sh`
 # 3. You are all set! Here is an awesome new linux!
 
 install_1(){

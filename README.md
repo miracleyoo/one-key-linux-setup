@@ -21,7 +21,7 @@ It is highly customizable and elegantly wrote, you can folk and customize your o
 ### Method 2
 
 1. Make sure you already have curl installed by "sudo apt-get install git".
-2. Clone this repo using `git clone https://github.com/miracleyoo/initialize-server-script`
+2. Clone this repo using `git clone https://github.com/miracleyoo/one-key-linux-setup`
 3. Switch into this folder and run `./one-key-linux-setup.sh`
 4. You are all set! 
 
