@@ -69,6 +69,9 @@ export LANG=en_US.UTF-8
 # Set python to python3 since many os do not install python2
 alias python='python3'"
 
+bash_profile="export SHELL=/bin/zsh
+exec /bin/zsh -l"
+
 install_2(){
     cd $HOME
     curl -L git.io/antigen > antigen.zsh
@@ -94,6 +97,9 @@ install_spacevim(){
 install_done(){
     # change zsh to default shell
     sudo chsh -s /bin/zsh
+    cat << EOF >> $HOME/.bash_profile
+$bash_profile
+EOF
     echo -e "\n\n\n[*] ENJOY! Script written by Miracleyoo.\n\n\n"
     /bin/zsh
 }
