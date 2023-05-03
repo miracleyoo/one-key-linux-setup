@@ -5,6 +5,8 @@ apt update
 apt install -y git
 apt install -y curl
 apt install -y wget
+apt install -y unzip
+
 
 # Install Zsh
 apt install -y zsh
@@ -18,7 +20,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 
 # Enable features
-sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)/' ~/.zshrc # enable git plugin
+sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting extract)/' ~/.zshrc # enable git plugin
 sed -i 's/#\s*\(ZSH_THEME="robbyrussell"\)/\1/' ~/.zshrc # change theme
 echo 'export TERM=xterm-256color' >> ~/.zshrc # enable 256 color support
 echo 'setopt histignorealldups' >> ~/.zshrc # ignore duplicate commands in history
@@ -72,6 +74,6 @@ echo "Config written to $tmux_conf_file"
 apt install -y libgl1-mesa-glx
 apt install -y libglib2.0-dev
 pip install --upgrade pip
-pip install -q opencv-contrib-python dotdict kornia scikit_learn scipy h5py pandas plotly 
+pip install -q opencv-contrib-python dotdict kornia scikit_learn scipy h5py pandas plotly gdown
 # lightning==1.6.4 
 # conda install -y pytorch-lightning==1.6.4 -c conda-forge
