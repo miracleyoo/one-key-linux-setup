@@ -6,7 +6,8 @@ apt install -y git
 apt install -y curl
 apt install -y wget
 apt install -y unzip
-
+apt install -y locales
+locale-gen en_US.UTF-8
 
 # Install Zsh
 apt install -y zsh
