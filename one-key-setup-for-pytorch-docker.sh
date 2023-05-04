@@ -72,8 +72,8 @@ echo "Config written to $tmux_conf_file"
 # rm ~/anaconda.sh
 
 # Install Python Common Packages
-apt install -y libgl1-mesa-glx
-apt install -y libglib2.0-dev
+# apt install -y libgl1-mesa-glx
+# apt install -y libglib2.0-dev
 pip install --upgrade pip
 pip install -q opencv-contrib-python dotdict kornia scikit_learn scipy h5py pandas plotly gdown
 # lightning==1.6.4 
