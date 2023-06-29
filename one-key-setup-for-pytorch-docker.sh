@@ -22,8 +22,8 @@ sed -i 's/#\s*\(ZSH_THEME="robbyrussell"\)/\1/' ~/.zshrc # change theme
 echo 'export TERM=xterm-256color' >> ~/.zshrc # enable 256 color support
 echo 'setopt histignorealldups' >> ~/.zshrc # ignore duplicate commands in history
 echo 'setopt share_history' >> ~/.zshrc # share command history between shells
-echo 'export LC_ALL=en_IN.UTF-8' >> ~/.zshrc # change language settings
-echo 'export LANG=en_IN.UTF-8' >> ~/.zshrc # change language settings
+echo 'export LC_ALL=en_US.UTF-8' >> ~/.zshrc # change language settings
+echo 'export LANG=en_US.UTF-8' >> ~/.zshrc # change language settings
 echo 'alias dircount="find . -type f | wc -l"' >> ~/.zshrc # Add folder count alias
 echo 'alias filecount="ls | wc -l"' >> ~/.zshrc # Add file count alias
 
