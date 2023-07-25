@@ -15,8 +15,11 @@ It is highly customizable and elegantly wrote, you can folk and customize your o
 1. Make sure you already have curl installed by "sudo apt-get install curl".
 
 2. Use command `curl -fsSL https://raw.githubusercontent.com/miracleyoo/one-key-linux-setup/master/one-key-linux-setup.sh -o one-key-linux-setup.sh && one-key-linux-setup.sh`
+   1. dfa
+   2. dfsf
 
-3. You are all set! Here is an awesome new linux!
+4. You are all set! Here is an awesome new linux!
+
 
 ### Method 2
 
