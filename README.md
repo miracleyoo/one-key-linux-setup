@@ -15,9 +15,10 @@ It is highly customizable and elegantly wrote, you can folk and customize your o
 1. Make sure you already have curl installed by "sudo apt-get install curl".
 
 2. Use command `curl -fsSL https://raw.githubusercontent.com/miracleyoo/one-key-linux-setup/master/one-key-linux-setup.sh -o one-key-linux-setup.sh && one-key-linux-setup.sh`
-   1. For docker/k8s linux system setup (Assuming your base image is `pytorch/pytorch:2.0.0-cuda11.7-cudnn8-devel`):
+   1. For docker/k8s Linux system setup (Assuming your base image is `pytorch/pytorch:2.0.0-cuda11.7-cudnn8-devel`):
       `curl -fsSL https://raw.githubusercontent.com/miracleyoo/one-key-linux-setup/master/one-key-setup-for-pytorch-docker.sh -o one-key-setup-for-pytorch-docker.sh && bash one-key-setup-for-pytorch-docker.sh && rm one-key-setup-for-pytorch-docker.sh`
-   3. legacy: `curl -fsSL https://raw.githubusercontent.com/miracleyoo/one-key-linux-setup/master/one-key-linux-setup.sh -o one-key-linux-setup.sh && one-key-linux-setup.sh`
+   2. For a brand-new Linux machine: `curl -fsSL https://raw.githubusercontent.com/miracleyoo/one-key-linux-setup/master/oks-full.sh -o oks-full.sh && sudo bash oks-full.sh && rm oks-full.sh`
+   3. legacy: `curl -fsSL https://raw.githubusercontent.com/miracleyoo/one-key-linux-setup/master/one-key-linux-setup.sh -o one-key-linux-setup.sh && sudo bash one-key-linux-setup.sh`
 
 4. You are all set! Here is an awesome new linux!
 
