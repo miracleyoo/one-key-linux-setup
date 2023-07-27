@@ -71,7 +71,7 @@ echo "Config written to $tmux_conf_file"
 # apt install -y libgl1-mesa-glx
 # apt install -y libglib2.0-dev
 pip install --upgrade pip
-pip install -q opencv-contrib-python dotdict kornia scikit_learn scipy h5py pandas plotly gdown matplotlib pathlib2 numba 
+pip install -q opencv-contrib-python dotdict kornia scikit_learn scipy h5py pandas plotly gdown matplotlib pathlib2 numba scikit-learn scikit-image
 pip install pytorch-lightning==1.6
 # lightning==1.6.4 
 # conda install -y pytorch-lightning==1.6.4 -c conda-forge
