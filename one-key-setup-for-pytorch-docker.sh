@@ -72,6 +72,6 @@ echo "Config written to $tmux_conf_file"
 # apt install -y libglib2.0-dev
 pip install --upgrade pip
 pip install -q opencv-contrib-python dotdict kornia scipy h5py pandas plotly gdown matplotlib pathlib2 numba scikit-learn scikit-image
-pip install pytorch-lightning==1.6
+pip install pytorch-lightning==1.9
 # lightning==1.6.4 
 # conda install -y pytorch-lightning==1.6.4 -c conda-forge
