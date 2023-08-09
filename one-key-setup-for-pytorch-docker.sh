@@ -75,3 +75,8 @@ pip install -q opencv-contrib-python dotdict kornia scipy h5py pandas plotly gdo
 pip install pytorch-lightning==1.9
 # lightning==1.6.4 
 # conda install -y pytorch-lightning==1.6.4 -c conda-forge
+
+# Install PyG-related packages
+conda install pyg -c pyg
+conda install pytorch-sparse -c pyg
+
