@@ -72,11 +72,13 @@ echo "Config written to $tmux_conf_file"
 # apt install -y libglib2.0-dev
 pip install --upgrade pip
 pip install -q opencv-contrib-python dotdict kornia scipy h5py pandas plotly gdown matplotlib pathlib2 numba scikit-learn scikit-image
-pip install pytorch-lightning==1.9
+pip install -q pytorch-lightning==1.9
+pip install -q ipykernel
+
 # lightning==1.6.4 
 # conda install -y pytorch-lightning==1.6.4 -c conda-forge
 
 # Install PyG-related packages
-conda install pyg -c pyg
-conda install pytorch-sparse -c pyg
+conda install -y pyg -c pyg
+conda install -y pytorch-sparse -c pyg
 
