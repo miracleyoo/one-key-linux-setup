@@ -20,6 +20,7 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $HOM
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting extract z)/' ~/.zshrc # enable git plugin
 sed -i 's/#\s*\(ZSH_THEME="robbyrussell"\)/\1/' ~/.zshrc # change theme
 echo 'export TERM=xterm-256color' >> ~/.zshrc # enable 256 color support
+echo 'export NCCL_P2P_DISABLE=1' >> ~/.zshrc # Avoid stuck when using ddp
 echo 'setopt histignorealldups' >> ~/.zshrc # ignore duplicate commands in history
 echo 'setopt share_history' >> ~/.zshrc # share command history between shells
 echo 'export LC_ALL=en_US.UTF-8' >> ~/.zshrc # change language settings
