@@ -45,7 +45,8 @@ set -g prefix \`
 unbind C-b # C-b即Ctrl+b键，unbind意味着解除绑定
 bind \` send-prefix # 绑定 \` 为新的指令前缀
 
-set -g mouse on
+# set -g mouse on
+set-option -g mouse
 run-shell ~/.tmux/plugins/tmux-resurrect/resurrect.tmux
 set -g @resurrect-capture-pane-contents 'on' # 开启恢复面板内容功能
 set -g @continuum-save-interval '5'
