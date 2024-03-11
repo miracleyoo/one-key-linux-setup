@@ -79,7 +79,8 @@ pip install -q ipykernel
 # lightning==1.6.4 
 # conda install -y pytorch-lightning==1.6.4 -c conda-forge
 
-# Install PyG-related packages
-conda install -y pyg -c pyg
-conda install -y pytorch-sparse -c pyg
+# Install PyG
+pip install torch_geometric
 
+# Optional PyG dependencies
+pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.0.0+cu117.html
