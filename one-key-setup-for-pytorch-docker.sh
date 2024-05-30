@@ -72,7 +72,7 @@ echo "Config written to $tmux_conf_file"
 # apt install -y libgl1-mesa-glx
 # apt install -y libglib2.0-dev
 pip install --upgrade pip
-pip install -q opencv-contrib-python dotdict kornia scipy h5py pandas plotly gdown matplotlib pathlib2 numba scikit-learn scikit-image tensorboard einops kaleido nbformat seaborn
+pip install -q opencv-contrib-python dotdict kornia scipy h5py pandas plotly gdown matplotlib pathlib2 numba scikit-learn scikit-image tensorboard einops kaleido nbformat seaborn wandb omegaconf hydra-core
 pip install -q pytorch-lightning==1.9
 pip install -q ipykernel
 
