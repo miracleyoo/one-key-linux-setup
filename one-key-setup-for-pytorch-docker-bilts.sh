@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# DEBIAN_FRONTEND=noninteractive 
+# TZ=America/Los_Angeles
+
 # Pre-requisite
 apt update
-apt install git curl wget unzip locales ffmpeg -y
+DEBIAN_FRONTEND=noninteractive TZ=America/Los_Angeles apt install locales -y
+apt install git curl wget unzip ffmpeg libsm6 libxext6 -y
 locale-gen en_US.UTF-8
 
 # Install Zsh
