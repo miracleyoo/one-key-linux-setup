@@ -74,7 +74,7 @@ echo "Config written to $tmux_conf_file"
 # conda install -y freeimage -c conda-forge
 
 conda create -y -n bflow python=3.11 pip
-conda activate bflow
+source activate bflow
 conda config --set channel_priority flexible
 
 CUDA_VERSION=12.1
