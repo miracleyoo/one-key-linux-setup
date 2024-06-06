@@ -2,7 +2,7 @@
 
 # Pre-requisite
 apt update
-apt install git curl wget unzip locales ffmpeg libsm6 libxext6  -y
+apt install git curl wget unzip locales ffmpeg -y
 locale-gen en_US.UTF-8
 
 # Install Zsh
