@@ -6,7 +6,7 @@
 # Pre-requisite
 apt update
 DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
-apt install git curl wget unzip ffmpeg libsm6 libxext6 locales -y
+apt install git curl wget unzip ffmpeg libsm6 libxext6 -y
 locale-gen en_US.UTF-8
 
 # Install Zsh
