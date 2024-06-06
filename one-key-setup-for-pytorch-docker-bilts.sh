@@ -72,15 +72,16 @@ echo "Config written to $tmux_conf_file"
 # apt install -y libgl1-mesa-glx
 # apt install -y libglib2.0-dev
 pip install --upgrade pip
-pip install -q opencv-contrib-python dotdict kornia scipy h5py pandas plotly gdown matplotlib pathlib2 numba scikit-learn scikit-image tensorboard wandb hydra-core omegaconf einops kaleido nbformat seaborn
-pip install -q pytorch-lightning==1.9
+pip install -q pytorch-lightning==2.1.3 wandb==0.16.1 opencv-python==4.8.1.78 imageio==2.33.1 lpips==0.1.4 pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 kaleido
+pip install -q dotdict kornia scipy gdown pathlib2 scikit-learn tensorboard
 pip install -q ipykernel
 
 # lightning==1.6.4 
 # conda install -y pytorch-lightning==1.6.4 -c conda-forge
 
-# Install PyG
-pip install torch_geometric
-
-# Optional PyG dependencies
-pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.0.0+cu117.html
+# Install PyG-related packages
+conda config --set channel_priority flexible
+conda install -y pyg -c pyg
+conda install -y pytorch-sparse -c pyg
+conda install -y h5py=3.10.0 blosc-hdf5-plugin=1.0.0 llvm-openmp=15.0.7 hydra-core=1.3.2 einops=0.7 tqdm numba -c nvidia -c conda-forge
+conda install -y freeimage -c conda-forge
