@@ -73,8 +73,8 @@ echo "Config written to $tmux_conf_file"
 # pip install -q ipykernel
 # conda install -y freeimage -c conda-forge
 
-conda create -y -n bflow python=3.11 pip
-source activate bflow
+conda create -y -n bilts python=3.11 pip
+source activate bilts
 conda config --set channel_priority flexible
 
 CUDA_VERSION=12.1
