@@ -69,8 +69,8 @@ echo "Config written to $tmux_conf_file"
 conda config --set channel_priority flexible
 conda install -y h5py blosc-hdf5-plugin llvm-openmp hydra-core=1.3.2 einops=0.7 -c conda-forge
 pip install --upgrade pip
-pip install -q pytorch-lightning==2.1.3 wandb==0.16.1 opencv-python==4.8.1.78 imageio==2.33.1 lpips==0.1.4 pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 
-pip install -q dotdict kornia scipy gdown pathlib2 scikit-learn tensorboard tqdm numba kaleido
+pip install -q pytorch-lightning==2.1.3 wandb==0.16.1 opencv-python==4.8.1.78 lpips==0.1.4 pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 
+pip install -q dotdict kornia scipy gdown pathlib2 scikit-learn tensorboard tqdm numba kaleido imageio
 pip install -q ipykernel
 # conda install -y freeimage -c conda-forge
 
