@@ -31,7 +31,7 @@ echo 'export LC_ALL=en_US.UTF-8' >> ~/.zshrc # change language settings
 echo 'export LANG=en_US.UTF-8' >> ~/.zshrc # change language settings
 echo 'alias dircount="find . -type f | wc -l"' >> ~/.zshrc # Add folder count alias
 echo 'alias filecount="ls | wc -l"' >> ~/.zshrc # Add file count alias
-
+echo 'source activate bilts' >> ~/.zshrc # Add conda activate bilts
 # Set default shell to Zsh
 chsh -s $(which zsh)
 
