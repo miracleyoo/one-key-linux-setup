@@ -1,10 +1,11 @@
 #!/bin/bash
 
-DEBIAN_FRONTEND=noninteractive 
-TZ=America/Los_Angeles
+# DEBIAN_FRONTEND=noninteractive 
+# TZ=America/Los_Angeles
 
 # Pre-requisite
 apt update
+DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
 apt install git curl wget unzip ffmpeg libsm6 libxext6 locales -y
 locale-gen en_US.UTF-8
 
