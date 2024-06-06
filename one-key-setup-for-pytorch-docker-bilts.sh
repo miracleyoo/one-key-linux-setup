@@ -64,23 +64,29 @@ EOF
 
 echo "Config written to $tmux_conf_file"
 
-# Install Anaconda
-# wget https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh -O ~/anaconda.sh
-# bash ~/anaconda.sh -b -p $HOME/anaconda
-# eval "$($HOME/anaconda/bin/conda shell.zsh hook)"
-# conda init
-# conda init zsh
-# rm ~/anaconda.sh
+# # Install Python Common Packages
+# conda config --set channel_priority flexible
+# conda install -y h5py=3.10.0 blosc-hdf5-plugin=1.0.0 llvm-openmp=15.0.7 hydra-core=1.3.2 einops=0.7 -c conda-forge
+# pip install --upgrade pip
+# pip install -q pytorch-lightning==2.1.3 wandb==0.16.1 opencv-python==4.8.1.78 imageio==2.33.1 lpips==0.1.4 pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 
+# pip install -q dotdict kornia scipy gdown pathlib2 scikit-learn tensorboard tqdm numba kaleido
+# pip install -q ipykernel
+# conda install -y freeimage -c conda-forge
 
-# Install Python Common Packages
-# apt install -y libgl1-mesa-glx
-# apt install -y libglib2.0-dev
+conda create -y -n bflow python=3.11 pip
+conda activate bflow
 conda config --set channel_priority flexible
-conda install -y h5py=3.10.0 blosc-hdf5-plugin=1.0.0 llvm-openmp=15.0.7 hydra-core=1.3.2 einops=0.7 -c conda-forge
 
-pip install --upgrade pip
-pip install -q pytorch-lightning==2.1.3 wandb==0.16.1 opencv-python==4.8.1.78 imageio==2.33.1 lpips==0.1.4 pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 
-pip install -q dotdict kornia scipy gdown pathlib2 scikit-learn tensorboard tqdm numba kaleido
-pip install -q ipykernel
+CUDA_VERSION=12.1
 
-conda install -y freeimage -c conda-forge
+conda install -y h5py=3.10.0 blosc-hdf5-plugin=1.0.0 llvm-openmp=15.0.7 \
+hydra-core=1.3.2 einops=0.7 tqdm numba \
+pytorch=2.1.2 torchvision pytorch-cuda=$CUDA_VERSION \
+-c pytorch -c nvidia -c conda-forge
+
+python -m pip install pytorch-lightning==2.1.3 wandb==0.16.1 \
+opencv-python==4.8.1.78 imageio==2.33.1 lpips==0.1.4 \
+pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 \
+loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 kaleido
+
+conda install -c conda-forge freeimage
