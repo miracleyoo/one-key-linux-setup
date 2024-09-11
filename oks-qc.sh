@@ -29,11 +29,14 @@ echo 'setopt histignorealldups' >> ~/.zshrc # ignore duplicate commands in histo
 echo 'setopt share_history' >> ~/.zshrc # share command history between shells
 echo 'export LC_ALL=en_US.UTF-8' >> ~/.zshrc # change language settings
 echo 'export LANG=en_US.UTF-8' >> ~/.zshrc # change language settings
+echo 'export TORCH_HOME=/local/mnt2/workspace2/zhongyan/torch_home' >> ~/.zshrc # change torch home (pkg install path)
+echo 'export PIP_CACHE_DIR=/local/mnt2/workspace2/zhongyan/pip_home' >> ~/.zshrc # change torch home (pkg install path)
 echo 'alias dircount="find . -type f | wc -l"' >> ~/.zshrc # Add folder count alias
 echo 'alias filecount="ls | wc -l"' >> ~/.zshrc # Add file count alias
 echo 'alias killpys="ps aux | grep python | awk '{print $2}' | xargs kill -9"' >> ~/.zshrc # one-key kill all python processes
 # Set default shell to Zsh
 chsh -s $(which zsh)
+source ~/.zshrc
 
 # Install Space-Vim
 apt install -y vim
@@ -65,17 +68,16 @@ EOF
 echo "Config written to $tmux_conf_file"
 
 # Install Anaconda
-mkdir /local/mnt2
 wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh -O ~/anaconda.sh
-bash ~/anaconda.sh -b -p $HOME/anaconda
-eval "$($HOME/anaconda/bin/conda shell.zsh hook)"
+bash ~/anaconda.sh -b -p /local/mnt2/workspace2/zhongyan/anaconda
+eval "$(/local/mnt2/workspace2/zhongyan/anaconda/bin/conda shell.zsh hook)"
 conda init
 conda init zsh
 rm ~/anaconda.sh
 
 # Install Python Common Packages
 conda config --set channel_priority flexible
-conda install -y h5py blosc-hdf5-plugin llvm-openmp hydra-core=1.3.2 einops=0.7 -c conda-forge
+conda install -y h5py blosc-hdf5-plugin llvm-openmp hydra-core einops -c conda-forge
 pip install --upgrade pip
 pip install -q pytorch-lightning==2.1.3 wandb==0.16.1 lpips==0.1.4 pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 
 pip install -q dotdict kornia scipy gdown pathlib2 scikit-learn tensorboard tqdm numba kaleido imageio opencv-python opencv-contrib-python face-recognition dlib
