@@ -11,7 +11,7 @@ locale-gen en_US.UTF-8
 
 # Install Zsh
 sudo apt install -y zsh
-zsh
+# zsh
 
 # Activate Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  "" --unattended
