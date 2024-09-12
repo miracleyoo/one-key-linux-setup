@@ -84,7 +84,8 @@ pip install -q dotdict kornia gdown tensorboardx opencv-python opencv-contrib-py
  
 # Install Pytorch
 # pip install torch torchvision torchaudio
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu118
 
 # Install Pytorch3d
 wget https://github.com/facebookresearch/pytorch3d/archive/refs/tags/v0.7.7.tar.gz
