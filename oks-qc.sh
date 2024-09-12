@@ -32,6 +32,7 @@ echo 'export LC_ALL=en_US.UTF-8' >> ~/.zshrc # change language settings
 echo 'export LANG=en_US.UTF-8' >> ~/.zshrc # change language settings
 echo 'export TORCH_HOME=/local/mnt2/workspace2/zhongyan/torch_home' >> ~/.zshrc # change torch home (pkg install path)
 echo 'export PIP_CACHE_DIR=/local/mnt2/workspace2/zhongyan/pip_home' >> ~/.zshrc # change torch home (pkg install path)
+echo "stty erase '^?'" >> ~/.zshrc # Fix vim backspace ^? issue
 echo 'alias dircount="find . -type f | wc -l"' >> ~/.zshrc # Add folder count alias
 echo 'alias filecount="ls | wc -l"' >> ~/.zshrc # Add file count alias
 echo 'alias killpys="ps aux | grep python | awk '{print $2}' | xargs kill -9"' >> ~/.zshrc # one-key kill all python processes
