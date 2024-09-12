@@ -4,13 +4,13 @@
 # TZ=America/Los_Angeles
 
 # Pre-requisite
-apt update
+sudo apt update
 DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
-apt install git curl wget unzip ffmpeg libsm6 libxext6 -y
+sudo apt install git curl wget unzip ffmpeg libsm6 libxext6 -y
 locale-gen en_US.UTF-8
 
 # Install Zsh
-apt install -y zsh
+sudo apt install -y zsh
 zsh
 
 # Activate Oh-My-Zsh
@@ -40,11 +40,11 @@ chsh -s $(which zsh)
 source ~/.zshrc
 
 # Install Space-Vim
-apt install -y vim
+sudo apt install -y vim
 curl -sLf https://spacevim.org/install.sh | bash
 
 # Tmux Setup
-apt install -y tmux
+sudo apt install -y tmux
 
 tmux_conf_file=~/.tmux.conf
 
@@ -77,24 +77,18 @@ conda init zsh
 rm ~/anaconda.sh
 
 # Install Python Common Packages
-conda config --set channel_priority flexible
-conda install -y h5py blosc-hdf5-plugin llvm-openmp hydra-core einops -c conda-forge
+conda install numpy pillow matplotlib scikit-image
+conda install -c anaconda scikit-image pandas cython
+conda install -c conda-forge tqdm tensorboardx umap-learn
 pip install --upgrade pip
-pip install -q pytorch-lightning==2.1.3 wandb==0.16.1 lpips==0.1.4 pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 
-pip install -q dotdict kornia scipy gdown pathlib2 scikit-learn tensorboard tqdm numba kaleido imageio opencv-python opencv-contrib-python face-recognition dlib
-pip install -q ipykernel
-imageio_download_bin freeimage
+pip install -q dotdict kornia gdown tensorboardx opencv-python opencv-contrib-python face-recognition dlib pillow einops ipykernel thop
+ 
+# Install Pytorch
+# pip install torch torchvision torchaudio
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 
-# CUDA_VERSION=12.1
-
-# conda install -y h5py=3.10.0 blosc-hdf5-plugin=1.0.0 llvm-openmp=15.0.7 \
-# hydra-core=1.3.2 einops=0.7 tqdm numba \
-# pytorch=2.1.2 torchvision pytorch-cuda=$CUDA_VERSION \
-# -c pytorch -c nvidia -c conda-forge
-
-# python -m pip install pytorch-lightning==2.1.3 wandb==0.16.1 \
-# opencv-python==4.8.1.78 imageio==2.33.1 lpips==0.1.4 \
-# pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 \
-# loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 kaleido
-
-# conda install -c conda-forge freeimage
+# Install Pytorch3d
+wget https://github.com/facebookresearch/pytorch3d/archive/refs/tags/v0.7.7.tar.gz
+tar -xvzf v0.7.7.tar.gz
+cd pytorch3d-0.7.7
+pip install -e .
