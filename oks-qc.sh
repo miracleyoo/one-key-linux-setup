@@ -77,11 +77,9 @@ conda init zsh
 rm ~/anaconda.sh
 
 # Install Python Common Packages
-conda install numpy pillow matplotlib scikit-image
-conda install -c anaconda scikit-image pandas cython
-conda install -c conda-forge tqdm tensorboardx umap-learn
+conda install cython
 pip install --upgrade pip
-pip install -q dotdict kornia gdown tensorboardx opencv-python opencv-contrib-python face-recognition dlib pillow einops ipykernel thop
+pip install -q dotdict kornia gdown tensorboardx opencv-python opencv-contrib-python face-recognition dlib pillow einops ipykernel thop umap-learn
  
 # Install Pytorch
 # pip install torch torchvision torchaudio
