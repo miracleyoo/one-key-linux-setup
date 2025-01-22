@@ -67,6 +67,6 @@ echo "Config written to $tmux_conf_file"
 # Install Python Common Packages
 conda config --set channel_priority flexible
 pip install --upgrade pip
-pip install -q numpy==1.26.4 numpy_groupies==0.11.2 hydra-core==1.3.2 einops==0.7 pytorch-lightning==2.1.3 wandb==0.16.1 opencv-python==4.8.1.78 lpips==0.1.4 pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 
+pip install -q numpy==1.26.4 numpy_groupies==0.11.2 hydra-core==1.3.2 einops==0.7 pytorch-lightning==2.1.3 wandb==0.16.1 opencv-python==4.8.1.78 lpips==0.1.4 pandas==2.1.4 plotly==5.18.0 moviepy==1.0.3 tabulate==0.9.0 loguru==0.7.2 matplotlib==3.8.2 scikit-image==0.22.0 h5py==3.12.1 
 pip install -q dotdict kornia scipy gdown pathlib2 scikit-learn tensorboard tqdm numba kaleido imageio
 pip install -q ipykernel
