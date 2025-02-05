@@ -73,5 +73,7 @@ rm ~/anaconda.sh
 # apt install -y libglib2.0-dev
 pip install --upgrade pip
 pip install -q opencv-contrib-python dotdict kornia scikit_learn scipy h5py pandas plotly gdown matplotlib pathlib2 numba
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
-pip install pytorch-lightning==1.6
+pip install -q torch torchvision torchaudio
+pip install -q pytorch-lightning==1.6
+# conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
