@@ -71,3 +71,13 @@ pip install -q numpy==1.26.4 numpy_groupies==0.11.2 hydra-core==1.3.2 einops==0.
 pip install -q dotdict kornia scipy gdown pathlib2 scikit-learn tensorboard tqdm numba kaleido imageio
 pip install -q pytorch_msssim
 pip install -q ipykernel jupyter ipywidgets
+
+
+# Install hdf5-blosc
+git clone https://github.com/Blosc/hdf5-blosc
+cd hdf5-blosc
+mkdir build
+cd build
+cmake ..
+make
+make install
