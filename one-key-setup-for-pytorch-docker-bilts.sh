@@ -75,6 +75,15 @@ conda install -y conda-forge/label/cf202003::blosc-hdf5-plugin=1.0.0
 imageio_download_bin freeimage
 # conda install -y freeimage -c conda-forge
 
+# Install hdf5-blosc
+git clone https://github.com/Blosc/hdf5-blosc
+cd hdf5-blosc
+mkdir build
+cd build
+cmake ..
+make
+make install
+
 
 
 # conda create -y -n bilts python=3.11 pip
