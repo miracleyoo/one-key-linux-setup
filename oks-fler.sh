@@ -73,11 +73,11 @@ pip install -q pytorch_msssim
 pip install -q ipykernel jupyter ipywidgets
 
 
-## Install hdf5-blosc
-#git clone https://github.com/Blosc/hdf5-blosc
-#cd hdf5-blosc
-#mkdir build
-#cd build
-#cmake ..
-#make
-#make install
+# # Install hdf5-blosc
+# git clone https://github.com/Blosc/hdf5-blosc
+# cd hdf5-blosc
+# mkdir build
+# cd build
+# cmake ..
+# make
+# make install
