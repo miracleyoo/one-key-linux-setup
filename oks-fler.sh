@@ -6,8 +6,7 @@
 # Pre-requisite
 apt update
 DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
-apt install git curl wget unzip ffmpeg libsm6 libxext6 -y
-locale-gen en_US.UTF-8
+apt install git curl wget unzip ffmpeg libsm6 libxext6 locales -y
 
 # Install Zsh
 apt install -y zsh
@@ -34,6 +33,10 @@ echo 'alias filecount="ls | wc -l"' >> ~/.zshrc # Add file count alias
 echo 'alias killpys="ps aux | grep python | awk '{print $2}' | xargs kill -9"' >> ~/.zshrc # one-key kill all python processes
 # Set default shell to Zsh
 chsh -s $(which zsh)
+
+# Setup Locales
+locale-gen en_US.UTF-8
+update-locale LANG=en_US.UTF-8
 
 # Install Space-Vim
 apt install -y vim
