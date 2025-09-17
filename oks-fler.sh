@@ -38,9 +38,9 @@ chsh -s $(which zsh)
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
 
-# Install Space-Vim
-apt install -y vim
-curl -sLf https://spacevim.org/install.sh | bash
+# Install Neo Vim
+sudo apt install -y vim
+sudo apt install python3-neovim
 
 # Tmux Setup
 apt install -y tmux
