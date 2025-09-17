@@ -2,11 +2,7 @@
 
 # Pre-requisite
 apt update
-apt install -y git
-apt install -y curl
-apt install -y wget
-apt install -y unzip
-apt install -y locales
+apt install -y git curl wget unzip locales vim python3-neovim
 locale-gen en_US.UTF-8
 
 # Install Zsh
@@ -33,10 +29,6 @@ echo 'alias filecount="ls | wc -l"' >> ~/.zshrc # Add file count alias
 
 # Set default shell to Zsh
 chsh -s $(which zsh)
-
-# Install Space-Vim
-apt install -y vim
-curl -sLf https://spacevim.org/install.sh | bash
 
 # Tmux Setup
 apt install -y tmux
