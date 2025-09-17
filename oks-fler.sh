@@ -6,7 +6,7 @@
 # Pre-requisite
 apt update
 DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
-apt install git curl wget unzip ffmpeg libsm6 libxext6 locales -y
+apt install git curl wget unzip ffmpeg libsm6 libxext6 locales vim python3-neovim -y
 
 # Install Zsh
 apt install -y zsh
@@ -37,10 +37,6 @@ chsh -s $(which zsh)
 # Setup Locales
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
-
-# Install Neo Vim
-sudo apt install -y vim
-sudo apt install python3-neovim
 
 # Tmux Setup
 apt install -y tmux
