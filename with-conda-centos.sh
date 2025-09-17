@@ -2,11 +2,7 @@
 
 # Pre-requisite
 yum update
-yum install -y git
-yum install -y curl
-yum install -y wget
-yum install -y unzip
-yum install -y locales
+yum install -y git curl wget unzip locales vim neovim python3-neovim
 locale-gen en_US.UTF-8
 
 # Install Zsh
@@ -33,10 +29,6 @@ echo 'alias filecount="ls | wc -l"' >> ~/.zshrc # Add file count alias
 
 # Set default shell to Zsh
 chsh -s $(which zsh)
-
-# Install Space-Vim
-yum install -y vim
-curl -sLf https://spacevim.org/install.sh | bash
 
 # Tmux Setup
 yum install -y tmux
