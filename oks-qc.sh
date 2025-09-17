@@ -6,7 +6,7 @@
 # Pre-requisite
 sudo apt update
 DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
-sudo apt install git curl wget unzip ffmpeg libsm6 libxext6 -y
+sudo apt install git curl wget unzip ffmpeg libsm6 libxext6 vim python3-neovim -y
 locale-gen en_US.UTF-8
 
 # Install Zsh
@@ -39,10 +39,6 @@ echo 'alias killpys="ps aux | grep python | awk '{print $2}' | xargs kill -9"' >
 # Set default shell to Zsh
 chsh -s $(which zsh)
 source ~/.zshrc
-
-# Install Neo Vim
-sudo apt install -y vim
-sudo apt install python3-neovim
 
 # Tmux Setup
 sudo apt install -y tmux
