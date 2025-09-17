@@ -14,7 +14,7 @@
 
 install_1(){
     # Build a package list here
-    package_list='git curl zsh tmux vim python3-dev python3-pip python3-setuptools'
+    package_list='git curl zsh tmux vim python3-dev python3-pip python3-setuptools python3-neovim'
 
     sudo apt-get update -y
     for i in ${package_list[@]}; do
@@ -89,11 +89,6 @@ EOF
     sudo chmod -R 755 $HOME/.antigen
 }
 
-install_spacevim(){
-    # Mention: Need to start vim twice! First time chose mode, exit, second time install plugins
-    curl -sLf https://spacevim.org/install.sh | bash
-}
-
 install_done(){
     # change zsh to default shell
     sudo chsh -s /bin/zsh
@@ -106,5 +101,4 @@ EOF
 
 install_1
 install_2
-install_spacevim
 install_done
