@@ -40,9 +40,9 @@ echo 'alias killpys="ps aux | grep python | awk '{print $2}' | xargs kill -9"' >
 chsh -s $(which zsh)
 source ~/.zshrc
 
-# Install Space-Vim
+# Install Neo Vim
 sudo apt install -y vim
-curl -sLf https://spacevim.org/install.sh | bash
+sudo apt install python3-neovim
 
 # Tmux Setup
 sudo apt install -y tmux
