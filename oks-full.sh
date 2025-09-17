@@ -2,7 +2,7 @@
 
 # Pre-requisite
 sudo apt update
-sudo apt install git curl wget unzip locales ffmpeg libsm6 libxext6  -y
+sudo apt install git curl wget unzip ffmpeg libsm6 libxext6 locales vim python3-neovim -y
 locale-gen en_US.UTF-8
 
 # Install Zsh
@@ -29,10 +29,6 @@ echo 'alias filecount="ls | wc -l"' >> ~/.zshrc # Add file count alias
 
 # Set default shell to Zsh
 chsh -s $(which zsh)
-
-# Install Neo Vim
-sudo apt install -y vim
-sudo apt install python3-neovim
 
 # Tmux Setup
 sudo apt install -y tmux
