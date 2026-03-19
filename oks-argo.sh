@@ -7,6 +7,7 @@ sudo apt install -y \
     vim python3-neovim zsh tmux
 
 sudo locale-gen en_US.UTF-8
+echo "[√] System packages installed successfully!"
 
 ### --- Oh-My-Zsh ---
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -27,6 +28,7 @@ for name in "${!plugins[@]}"; do
     [ ! -d "$ZSH_CUSTOM/plugins/$name" ] && \
         git clone --depth=1 "${plugins[$name]}" "$ZSH_CUSTOM/plugins/$name"
 done
+echo "[√] Oh-my-zsh and plugins installed successfully!"
 
 ### --- Update .zshrc ---
 ZSHRC="$HOME/.zshrc"
@@ -66,9 +68,11 @@ print_info() {
 # <<< custom zsh settings <<<
 EOF
 fi
+echo "[√] Zshrc updated successfully!"
 
 # Set default shell to Zsh
 chsh -s $(which zsh)
+echo "[√] Default shell set to zsh successfully!"
 
 # Tmux Setup
 sudo apt install -y tmux
@@ -92,5 +96,6 @@ set-option -g history-limit 10000
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 bind-key M split-window -h "vim ~/.tmux.conf"
 EOF
+echo "[√] Tmux config updated successfully!"
 
-echo "✔ Environment initialized successfully!"
+echo "[√] Environment initialized successfully!"
