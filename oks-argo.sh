@@ -98,4 +98,16 @@ bind-key M split-window -h "vim ~/.tmux.conf"
 EOF
 echo "[√] Tmux config updated successfully!"
 
-echo "[√] Environment initialized successfully!"
+### --- Conda Configuration ---
+/opt/conda/bin/conda init zsh bash
+source /opt/conda/etc/profile.d/conda.sh
+conda create -n rodney python=3.10.19 -y
+conda activate rodney
+cd /prj/qct/datasets_internal_3dMD_body1/users/zzy/projects/issac-gr00t-rodneygr
+pip install -r requirements.txt
+pip install --no-build-isolation --no-cache-dir flash-attn==2.7.1.post4
+pip install -i https://devpi.qualcomm.com/piqaro/rel/+simple piqaro==1.0.0
+pip install -e ".[qcom]"
+echo "[√] Conda environment initialized successfully!"
+
+echo "[√] Linux initialized successfully!"
