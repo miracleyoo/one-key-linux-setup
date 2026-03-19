@@ -71,7 +71,7 @@ fi
 echo "[√] Zshrc updated successfully!"
 
 # Set default shell to Zsh
-chsh -s $(which zsh)
+echo 'exec /usr/bin/zsh -l' >> ~/.bashrc
 echo "[√] Default shell set to zsh successfully!"
 
 # Tmux Setup
